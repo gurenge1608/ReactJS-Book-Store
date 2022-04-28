@@ -1,0 +1,41 @@
+.searchComponent {
+    text-align: right;
+    width: 100%;
+}
+
+.inputBar {
+    width: 750px;
+    border-radius: 5px 0 0 5px;
+    max-width: 80%!important;
+    padding: 6px;
+    border: none;
+    padding: 5px 15px;
+    box-shadow: none;
+    height: 27px;
+    border-radius: 5px 0 0 5px!important;
+}
+
+.search {
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    vertical-align: top;
+    margin-top: -2px;
+    float: right;
+}
+
+.searchBtn {
+    background: #fbb421 url(https://www.bookswagon.com/images/css/search-solid.svg) no-repeat center!important;
+    padding: 16px 15px;
+    background-size: 20px 19px!important;
+    position: relative;
+    height: 37px!important;
+    width: 43px!important;
+    vertical-align: top;
+    border-radius: 0 5px 5px 0;
+    top: 1px;
+    right: 5px;
+    z-index: 1;
+    cursor: pointer;
+    border: 0;
+    line-height: inherit;
+}

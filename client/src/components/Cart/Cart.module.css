@@ -1,0 +1,25 @@
+.itemCount {
+    position: absolute;
+    color: #fff;
+    padding: 0;
+    height: 17px;
+    width: 17px;
+    line-height: 17px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    top: 0;
+    font-weight: 700;
+    display: inline-block;
+    width: 100%;
+    padding-left: 3px;
+}
+
+.itemlabel {
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: #fff;
+}
+
+
