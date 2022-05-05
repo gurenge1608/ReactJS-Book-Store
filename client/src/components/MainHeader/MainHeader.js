@@ -5,7 +5,7 @@ import UserHeader from '../UserHeader/UserHeader';
 import Cart from '../Cart/Cart';
 const MainHeader = () => {
     return (
-        <header>
+        
             <div className={classes.container}>
                 <div className="row d-flex align-items-center">
                     <div className="col-1-sm">
@@ -22,7 +22,7 @@ const MainHeader = () => {
                     </div>
                 </div>
             </div>
-        </header>
+        
     )
 }
 

@@ -1,0 +1,116 @@
+.closeBtn {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+.item {
+    margin-top: 25px;
+    padding-left: 20px;
+    padding-right: -20px; 
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+  
+.actions button {
+    font: inherit;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #d51912;
+    border: 1px solid #d51912;
+    width: 3rem;
+    text-align: center;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin: 0.25rem;
+}
+
+.actions button:hover,
+.actions button:active {
+    background-color: #c41a14;
+    color: white;
+}
+
+.actions input{
+    width: 35px;
+    height: 34px;
+    text-align: center;
+}
+
+.addBtn {
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background: #d51912!important;
+    color: #fff!important;
+    margin-bottom: 20px;
+    width: 100%!important;
+}
+
+.price {
+    font-weight: 700!important;
+    color: #d51912!important;
+    font-size: 22px;
+    margin-top: 0;
+}
+.title {
+    font-size: 20px!important;
+    font-style: italic;
+}
+.author {
+    color: #717171;
+}
+
+.rightside {
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 79%;
+}
+
+.description {
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.detailBtn {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background: #fff!important;
+    color: #d2232a!important;
+    border: 1px solid #d2232a!important;
+}

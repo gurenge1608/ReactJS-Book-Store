@@ -1,0 +1,21 @@
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+.custom-prevArrow,
+.custom-nextArrow {
+  position: absolute;
+  z-index: 99999;
+  top: 16%;
+}
+.custom-prevArrow {
+  left: -21px;
+}
+.custom-nextArrow {
+  right: -21px;
+}
+.custom-prevArrow:hover,
+.custom-nextArrow:hover {
+  fill: red;
+  cursor: pointer;
+}
