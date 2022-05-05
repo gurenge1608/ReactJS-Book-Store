@@ -1,4 +1,4 @@
-import React, {useState}  from 'react';
+import React, {useState, useContext}  from 'react';
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -7,6 +7,7 @@ import BookListTitle from './BookListTitle';
 import BookItem from './BookItem/BookItem';
 import classes from './BookList.module.css';
 import BoockQuickView from './BookQuickView';
+import CartContext from '../../store/cart-context';
 import '../UI/Arrow.css';
 
 const GalleryPrevArrow = ({ currentSlide, slideCount, ...props }) => {
@@ -40,6 +41,12 @@ const BookList = props => {
     const quickViewClose = () => {
       setQuickViewisShown(false)
     }
+    const cartCtx = useContext(CartContext);
+
+    const addToCartHandler = item => {
+      cartCtx.addItem(item);
+      setQuickViewisShown(false)
+    };
 
     const booklist = props.items.map(item => 
       <BookItem 
@@ -66,7 +73,7 @@ const BookList = props => {
       };
       return (
         <React.Fragment>
-          {quickViewisShown && <BoockQuickView item={quickViewItem} onClose={quickViewClose} />}
+          {quickViewisShown && <BoockQuickView item={quickViewItem} onClose={quickViewClose} onAddToCart={addToCartHandler}/>}
         <div className={classes.list} style={{marginTop: '100px'}}>
         <Container>
           <BookListTitle text={props.text} />

@@ -1,25 +1,47 @@
-.itemCount {
-    position: absolute;
-    color: #fff;
+.cart-items {
+    list-style: none;
+    margin: 0;
     padding: 0;
-    height: 17px;
-    width: 17px;
-    line-height: 17px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 13px;
-    top: 0;
-    font-weight: 700;
-    display: inline-block;
-    width: 100%;
-    padding-left: 3px;
-}
-
-.itemlabel {
+    max-height: 20rem;
+    overflow: scroll;
+  }
+  
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .actions {
+    text-align: right;
+  }
+  
+  .actions button {
+    font: inherit;
     cursor: pointer;
-    display: inline-block;
-    margin-bottom: .5rem;
-    color: #fff;
-}
-
-
+    background-color: transparent;
+    border: 1px solid rgb(235, 23, 0);
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+  }
+  
+  .actions button:hover,
+  .actions button:active {
+    background-color: rgb(207, 21, 1);
+    border-color: rgb(183, 19, 1);
+    color: white;
+  }
+  
+  .actions .button--alt {
+    color: rgb(235, 23, 0);
+  }
+  
+  .actions .button {
+    background-color: rgb(235, 23, 0);
+    color: white;
+  }
+  
