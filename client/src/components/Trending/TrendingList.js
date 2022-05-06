@@ -57,7 +57,7 @@ const TrendingList = props => {
       return (
         <div className={classes.trendinglist}>
         <Container>
-          <p>Now Trending</p>
+          <p className={classes.title}>Now Trending</p>
           <Slider {...settings}>
             {slides}
           </Slider>

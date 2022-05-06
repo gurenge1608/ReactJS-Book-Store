@@ -1,3 +1,9 @@
 .trendinglist {
     padding-bottom: 20px;
 }
+
+.title {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bold;
+}
