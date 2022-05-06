@@ -40,7 +40,7 @@ const MainFooter = (props) => {
                 href="https://www.bookswagon.com/"
                 target="blank"
               >
-                <i class="fab fa-pinterest-p" />
+                <i className="fab fa-pinterest-p" />
               </a>
             </li>
             <li>
@@ -49,7 +49,7 @@ const MainFooter = (props) => {
                 href="https://www.bookswagon.com/"
                 target="blank"
               >
-                <i class="fab fa-youtube" />
+                <i className="fab fa-youtube" />
               </a>
             </li>
             <li>
@@ -58,7 +58,7 @@ const MainFooter = (props) => {
                 href="https://www.bookswagon.com/"
                 target="blank"
               >
-                <i class="fab fa-instagram" />
+                <i className="fab fa-instagram" />
               </a>
             </li>
           </ul>

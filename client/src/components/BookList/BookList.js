@@ -6,7 +6,7 @@ import Container from '../UI/Container';
 import BookListTitle from './BookListTitle';
 import BookItem from './BookItem/BookItem';
 import classes from './BookList.module.css';
-import BoockQuickView from './BookQuickView';
+import BookQuickView from './BookQuickView';
 import CartContext from '../../store/cart-context';
 import '../UI/Arrow.css';
 
@@ -73,7 +73,7 @@ const BookList = props => {
       };
       return (
         <React.Fragment>
-          {quickViewisShown && <BoockQuickView item={quickViewItem} onClose={quickViewClose} onAddToCart={addToCartHandler}/>}
+          {quickViewisShown && <BookQuickView item={quickViewItem} onClose={quickViewClose} onAddToCart={addToCartHandler}/>}
         <div className={classes.list} style={{marginTop: '50px'}}>
         <Container>
           <BookListTitle text={props.text} />

@@ -1,0 +1,11 @@
+.smallitem {
+    padding-left: 0px!important;
+    margin-bottom: auto!important;
+    margin-top: auto!important;
+    width: 59%;
+}
+
+
+.smallitem .row [class^=col] {
+    margin: 0.5rem 2%;
+}

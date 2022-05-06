@@ -7,6 +7,7 @@ import CartProvider from './store/CartProvider';
 import AdsSlider from './components/AdsSlider/AdsSlider';
 import Banner from './components/Banner/Banner';
 import MainFooter from './components/MainFooter/MainFooter';
+import TrendingList from './components/Trending/TrendingList';
 import axios from 'axios';
 
 const BestSell = [
@@ -33,7 +34,7 @@ const BestSell = [
     description: `An action-packed comedy about a fake family that includes a spy, an assassin and a telepath! Master spy Twilight is unparalleled when it comes to going undercover on dangerous missions for the betterment of the world. But when he receives the ultimate assignment--to get married and have a kid--he may finally be in over his head!
 
     Twilight and Nightfall enter an underground tennis tournament, hoping for an opportunity to gain a secret intelligence document that could very well bring the wo...`,
-    price: 601,
+    price: 531,
     image: 'https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/137/9781974725137.jpg'
   },
   {
@@ -90,6 +91,7 @@ const BestSell = [
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
   const [graphicNovels, setGraphicNovels] = useState([]);
+  const [trendingBooks, setTrendingBooks] = useState([]);
 
   useEffect(() => {
     axios.get(`https://reactjs-683b3-default-rtdb.firebaseio.com/graphicnovel.json`)
@@ -109,6 +111,24 @@ function App() {
       setGraphicNovels(loadedBooks);
     })
     .catch(error => console.log(error))
+
+    axios.get(`https://reactjs-683b3-default-rtdb.firebaseio.com/nowtrending.json`)
+    .then(res => {
+      const loadedBooks = [];
+      const responseData = res.data;
+      for (const key in responseData) {
+        loadedBooks.push({
+          id: key,
+          title: responseData[key].title,
+          description: responseData[key].description,
+          price: responseData[key].price,
+          image: responseData[key].image,
+          author: responseData[key].author,
+        });
+      }
+      setTrendingBooks(loadedBooks);
+    })
+    .catch(error => console.log(error))
   }, []);
 
   const showCartHandler = () => {
@@ -126,6 +146,7 @@ function App() {
         <Banner/>
       </div>
       <AdsSlider/>
+      <TrendingList items={trendingBooks} />
       <BookList items={BestSell} text="Best Seller" />
       <BookList items={graphicNovels} text="Graphic Novels" />
 

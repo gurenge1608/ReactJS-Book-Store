@@ -14,8 +14,9 @@ const cartReducer = (state, action) => {
     
 
     const existingCartItemIndex = state.items.findIndex(
-      (item) => item.id === action.item.id
+      (item) => parseInt(item.id) === parseInt(action.item.id)
     );
+    console.log(action.item.id)
     const existingCartItem = state.items[existingCartItemIndex];
     let updatedItems;
 
