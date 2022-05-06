@@ -4,6 +4,8 @@ import MainHeader from './components/MainHeader/MainHeader';
 import BookList from './components/BookList/BookList';
 import Cart from './components/Cart/Cart';
 import CartProvider from './store/CartProvider';
+import AdsSlider from './components/AdsSlider/AdsSlider';
+import Banner from './components/Banner/Banner';
 
 const BestSell = [
   {
@@ -97,8 +99,13 @@ function App() {
     <CartProvider>
       {cartIsShown && <Cart onClose={hideCartHandler} />}
       <MainHeader onShowCart={showCartHandler}/>
+      <div style = {{marginTop: '100px'}}>
+        <Banner/>
+      </div>
+      <AdsSlider/>
       <BookList items={BestSell} text="Best Seller" />
     </CartProvider>
+
   );
 }
 
