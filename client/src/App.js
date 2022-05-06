@@ -16,7 +16,7 @@ const BestSell = [
     title: 'Atomic Habits',
     author: 'James Clear',
     description: 'THE PHENOMENAL INTERNATIONAL BESTSELLER - 1 MILLION COPIES SOLDTransform your life with tiny changes in behaviour - starting now. People think that when you want to change your life, you need to think big.',
-    price: 551,
+    price: 552,
     image: 'https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/831/9781847941831.jpg'
   },
   {
