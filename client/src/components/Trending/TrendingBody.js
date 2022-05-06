@@ -43,7 +43,7 @@ const TrendingBody = props => {
                 </div>
             </div>
 
-            <TrendingBigItem item={props.items[props.items.length - 1]} onView={quickViewHandler.bind(null, props.items[0])} /> 
+            <TrendingBigItem item={props.items[props.items.length - 1]} onView={quickViewHandler.bind(null, props.items[props.items.length - 1])} /> 
     
         </div>
     </React.Fragment>)
