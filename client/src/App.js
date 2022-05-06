@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import MainHeader from './components/MainHeader/MainHeader';
 import BookList from './components/BookList/BookList';
@@ -7,6 +7,7 @@ import CartProvider from './store/CartProvider';
 import AdsSlider from './components/AdsSlider/AdsSlider';
 import Banner from './components/Banner/Banner';
 import MainFooter from './components/MainFooter/MainFooter';
+import axios from 'axios';
 
 const BestSell = [
   {
@@ -88,6 +89,27 @@ const BestSell = [
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
+  const [graphicNovels, setGraphicNovels] = useState([]);
+
+  useEffect(() => {
+    axios.get(`https://reactjs-683b3-default-rtdb.firebaseio.com/graphicnovel.json`)
+    .then(res => {
+      const loadedBooks = [];
+      const responseData = res.data;
+      for (const key in responseData) {
+        loadedBooks.push({
+          id: key,
+          title: responseData[key].title,
+          description: responseData[key].description,
+          price: responseData[key].price,
+          image: responseData[key].image,
+          author: responseData[key].author,
+        });
+      }
+      setGraphicNovels(loadedBooks);
+    })
+    .catch(error => console.log(error))
+  }, []);
 
   const showCartHandler = () => {
     setCartIsShown(true);
@@ -105,6 +127,8 @@ function App() {
       </div>
       <AdsSlider/>
       <BookList items={BestSell} text="Best Seller" />
+      <BookList items={graphicNovels} text="Graphic Novels" />
+
       <MainFooter/>
     </CartProvider>
 

@@ -8,6 +8,9 @@ const CartItem = (props) => {
       <div>
         <h2>{props.name}</h2>
         <div className={classes.summary}>
+          <img className={classes.image} src={props.image} alt = "Cart item"/>
+          <span className={classes.title}>{props.title}</span>
+          <span className={classes.title} style={{fontWeight: '500'}}>By {props.author}</span>
           <span className={classes.price}>{price}</span>
           <span className={classes.amount}>x {props.amount}</span>
         </div>

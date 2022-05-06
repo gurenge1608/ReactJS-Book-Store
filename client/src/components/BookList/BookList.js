@@ -74,7 +74,7 @@ const BookList = props => {
       return (
         <React.Fragment>
           {quickViewisShown && <BoockQuickView item={quickViewItem} onClose={quickViewClose} onAddToCart={addToCartHandler}/>}
-        <div className={classes.list} style={{marginTop: '100px'}}>
+        <div className={classes.list} style={{marginTop: '50px'}}>
         <Container>
           <BookListTitle text={props.text} />
           <Slider {...settings}>

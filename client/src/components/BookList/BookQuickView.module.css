@@ -20,6 +20,10 @@
     padding-right: -20px; 
 }
 
+.image {
+    max-width: 125px;
+}
+
 .actions {
     display: flex;
     flex-direction: row;

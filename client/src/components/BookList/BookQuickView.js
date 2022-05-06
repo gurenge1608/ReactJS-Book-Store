@@ -44,7 +44,7 @@ const BookQuickView = props => {
         <button className={classes.closeBtn} onClick={props.onClose}>x</button>
         <div className={"row " + classes.item}>
             <div className="col-3-sm" >
-                <img src={props.item.image} alt="BookPic"/>
+                <img className={classes.image} src={props.item.image} alt="BookPic"/>
                 <div className={classes.actions}>
                     <button onClick={amountMinusHandler}>−</button>
                     <input type="number" ref={amountRef} value={enteredAmount} onChange={amountChangeHandler} />
