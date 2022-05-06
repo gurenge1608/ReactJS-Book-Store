@@ -1,0 +1,17 @@
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background: #d51912;
+    padding: 15px;
+    /* position: fixed; */
+    bottom: 0;
+    z-index: 100;
+
+}
+
+.usercart {
+    margin-left: 100px;
+}

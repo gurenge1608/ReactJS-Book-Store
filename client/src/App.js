@@ -6,6 +6,7 @@ import Cart from './components/Cart/Cart';
 import CartProvider from './store/CartProvider';
 import AdsSlider from './components/AdsSlider/AdsSlider';
 import Banner from './components/Banner/Banner';
+import MainFooter from './components/MainFooter/MainFooter';
 
 const BestSell = [
   {
@@ -104,6 +105,7 @@ function App() {
       </div>
       <AdsSlider/>
       <BookList items={BestSell} text="Best Seller" />
+      <MainFooter/>
     </CartProvider>
 
   );
